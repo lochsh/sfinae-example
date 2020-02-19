@@ -5,12 +5,12 @@ T absolute(T aValue);
 
 template <>
 double absolute(double aValue) {
-    return ( aValue < 0 ) ? -aValue : aValue;
+    return ( aValue <= -1 ) ? -aValue : aValue;
 }
 
 template <>
 std::int32_t absolute(std::int32_t aValue) {
-    return ( aValue < 0 ) ? -aValue : aValue;
+    return ( aValue <= -1 ) ? -aValue : aValue;
 }
 
 template <>

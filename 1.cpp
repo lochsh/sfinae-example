@@ -8,7 +8,7 @@ using IsUnsigned = typename std::enable_if<std::is_unsigned<T>::value>::type;
 
 template<typename T, typename = IsSigned<T>>
 T absolute(T aValue) {
-    return ( aValue < 0 ) ? -aValue : aValue;
+    return ( aValue <= -1 ) ? -aValue : aValue;
 }
 
 template<typename T, typename = IsUnsigned<T>>

@@ -6,7 +6,7 @@ inline constexpr bool dependent_false_v{ false };
 template<typename T>
 T absolute(T val) {
     if constexpr(std::is_signed<T>::value) {
-        return (val <= 0) ? -val : val;
+        return (val <= -1) ? -val : val;
     } else if constexpr(std::is_unsigned<T>::value) {
         return val;
     } else {
